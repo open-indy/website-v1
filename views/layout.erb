@@ -5,10 +5,37 @@
   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link href="/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
   <link href="/css/app.css" rel="stylesheet">
+  <style>
+      html, body, #map-canvas {
+        height: 300px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+    function initialize() {
+      var myLatlng = new google.maps.LatLng(39.7643324,-86.1591664);
+      var mapOptions = {
+      zoom: 18,
+      center: myLatlng
+    }
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Hello World!'
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+  </script>
 </head>
 
-<body>
-<nav class="navbar navbar-inverse" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 <div class ="navbar-header">
   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
   <span class="sr-only">Toggle navigation</span>
@@ -25,12 +52,16 @@
     <li><a href="/#where">Where</a></li>
     <li><a href="/#schedule">Schedule</a></li>
     <li><a href="/#challenges">Challenges</a></li>
-    <li><a href="/#data">Datasets</a></li>
+    <li><a href="/#datasets">Datasets</a></li>
+    <li><a href="/#sponsors">Sponsors</a></li>
     <li><a href="/#contact">Contact Us</a></li>
-    <li><a href="http://hackforchange.org/index.html#top">HackForChange.org</a></li>
+    <li><a href="/http://hackforchange.org/index.html#top">HackForChange.org</a></li>
   </ul>
 </div>
 </nav>
+<br>
+<br>
+<br>
 
 <!-- yields to content of the ERB page route -->
 <%= yield %>
