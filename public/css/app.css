@@ -8,3 +8,9 @@ nav,
   background-color: #36577A;
   border-color: #080808;
 }
+
+.panel-default .panel-heading {
+  color: #333;
+  border-color: #ddd;
+  background-image: linear-gradient(to bottom, #36577A 0%, #FFFFFF 100%);
+}

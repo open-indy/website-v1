@@ -1,0 +1,22 @@
+<div class="col-md-8 col-md-offset-2">
+  <center><h2>Currently Submitted Challenge</h2></center>
+  <hr>
+  <div class="col-md-12 col-md-offset-0">
+  <div class="well">
+    <table class="table table-bordered table-striped">
+    <% @data.each do |row| %>
+      <tr>
+        <td><%= row["organization"] %></td>
+        <td><%= row["challenge_desc"] %></td>
+        <td><%= row["apis"] %></td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+</div>
+</div>
+
+<div class="col-md-8 col-md-offset-2">
+<hr>
+<p>Site donated and created by <a href="http://socialhealthinsights.com/">Social Health Insights</a></p>
+</div>

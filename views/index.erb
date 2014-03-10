@@ -7,21 +7,36 @@
   <center><button type="button" a class="btn btn-danger" onclick="window.open('https://www.eventbrite.com/')">Register to Attend</button></center>
   <hr>
 </div>
-</section>
 
 <a name="where"></a>
 <div class="col-md-8 col-md-offset-2">
   <center><h2>Where</h2></center>
-  <center><h4>We have an awseome day planned on Georgia street downtown Indianapolis!</h4></center>
+  <center><h4>We have an awseome day planned at Georgia street downtown Indianapolis!</h4></center>
   <center><div id="map-canvas"></div></center>
   <hr>
+  <a name="schedule"></a>
 </div>
 
-<a name="schedule"></a>
 <div class="col-md-8 col-md-offset-2">
   <center><h2>Schedule</h2></center>
   <center><h4>Stay tuned for more information on the exact schedule.</h4></center>
   <center><p>We plan to start the day around 10am and continue the fun into the evening. Save the date on your calandar!</p></center>
+  <center>
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">May 31st Hackathon Schedule</h3>
+      </div>
+      <div class="panel-body"><b>Opening Remarks:</b> 10 am</div>
+      <div class="panel-body"><b>Begin Coding:</b> 10:15 am</div>
+      <div class="panel-body"><b>Lunch:</b> 12:00 pm</div>
+      <div class="panel-body"><b>Lunchtime Speaker:</b> 12:15 pm</div>
+      <div class="panel-body"><b>Dinner:</b> 6:00 pm</div>
+      <div class="panel-body"><b>Show Off Your Work:</b> 7:30 pm</div>
+      <div class="panel-body"><b>Music, Food, Networking:</b> 9:00 pm</div>
+      </div>
+    </div>
+  </center> 
 </div>
 
 <div class="col-md-8 col-md-offset-2">
@@ -33,7 +48,7 @@
   <center><h2>Challenges</h2></center>
   <center><h4>Got a Challenge? </h4>
   <center><p>You can submit one to the broader <a href="http://hackforchange.org/index.html#challenges">HackForChange</a> website or locally using the submission button below.</p></center> 
-  <center><p>We have recieved <b><u><%= @challengecount %></u></b> local challenge(s) to date!</p></center>
+  <center><p>We have recieved <a href="/localchallenge"><b><u><%= @challengecount %></u></b> local challenge(s)</a> to date!</p></center>
   <center><button type="button" a class="btn btn-danger" onclick="window.open('/newchallenge')">Submit Local Challenge</button>
 </div>
 

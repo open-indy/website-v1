@@ -31,15 +31,18 @@ end
 ##############################################
 
 get "/" do
-	@data = Challenge.all? #gets all challenge data from the database
+	@data = Challenge.all
 	@challengecount = DataMapper.repository.adapter.select("SELECT COUNT(id) FROM challenges").first.to_s
-	puts @challengecount
-	
 	erb :index
 end
 
 get "/newchallenge" do
 	erb :newchallenge
+end
+
+get "/localchallenge" do
+	@data = Challenge.all
+	erb :localchallenge
 end
 
 post '/newchallenge' do
