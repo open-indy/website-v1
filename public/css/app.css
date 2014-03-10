@@ -8,8 +8,3 @@ nav,
   background-color: #36577A;
   border-color: #080808;
 }
-
-button,
-.btn .btn-primary {
-	background-image: linear-gradient(to bottom, #428bca 0%, #36577A 100%)
-}

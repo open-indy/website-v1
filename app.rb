@@ -1,3 +1,4 @@
+require 'sinatra'
 require 'rubygems'
 require 'net/https'
 require 'bundler'
@@ -12,8 +13,7 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/IndCivic
 class Challenge
   include DataMapper::Resource
   property :id, Serial
-  property :first_name, Text
-  property :last_name, Text
+  property :name, Text
   property :email, Text
   property :organization, Text
   property :challenge_desc, Text
@@ -24,12 +24,33 @@ end
 
 DataMapper.finalize.auto_upgrade!
 
+use Rack::Auth::Basic, "Protected Area" do |username, password|
+  username == 'civic' && password == 'hack'
+end
+
 ##############################################
 
 get "/" do
-  erb :index
+	@data = Challenge.all? #gets all challenge data from the database
+	@challengecount = DataMapper.repository.adapter.select("SELECT COUNT(id) FROM challenges").first.to_s
+	puts @challengecount
+	
+	erb :index
 end
 
 get "/newchallenge" do
 	erb :newchallenge
+end
+
+post '/newchallenge' do
+	n = Challenge.new
+	n.name = params[:name]
+	n.email = params[:email]
+	n.organization = params[:organization]
+	n.challenge_desc = params[:challenge_desc]
+	n.apis = params[:apis]
+	n.created_at = Time.now
+	n.updated_at = Time.now
+	n.save
+	redirect '/'
 end
