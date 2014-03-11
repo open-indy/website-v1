@@ -2,9 +2,11 @@
   <center><h2>Currently Submitted Challenge</h2></center>
   <hr>
   <div class="col-md-12 col-md-offset-0">
-  <div class="well">
     <table class="table table-bordered table-striped">
     <% @data.each do |row| %>
+    <th>Organization</th>
+    <th>Challenge Description</th>
+    <th>Data and API's Prefered</th>
       <tr>
         <td><%= row["organization"] %></td>
         <td><%= row["challenge_desc"] %></td>
@@ -13,7 +15,6 @@
     <% end %>
     </table>
   </div>
-</div>
 </div>
 
 <div class="col-md-8 col-md-offset-2">
