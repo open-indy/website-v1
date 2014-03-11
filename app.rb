@@ -28,6 +28,8 @@ use Rack::Auth::Basic, "Protected Area" do |username, password|
   username == 'civic' && password == 'hack'
 end
 
+GOOGLE_API_KEY = ENV['GOOGLE_MAP_API_KEY']
+
 ##############################################
 
 get "/" do
