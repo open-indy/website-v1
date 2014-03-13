@@ -57,3 +57,7 @@ post '/newchallenge' do
 	n.save
 	redirect '/'
 end
+
+get '/terms' do 
+	erb :terms
+end
