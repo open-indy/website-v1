@@ -26,7 +26,7 @@ DataMapper.finalize.auto_upgrade!
 
 # use Rack::Auth::Basic, "Protected Area" do |username, password|
 # username == '' && password == ''
-end
+# end
 
 ##############################################
 
