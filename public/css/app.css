@@ -12,5 +12,5 @@ nav,
 .panel-default .panel-heading {
   color: #333;
   border-color: #ddd;
-  /*background-image: linear-gradient(to bottom, #36577A 0%, #FFFFFF 100%)*/;
+  background-image: linear-gradient(to bottom, #36577A 0%, #FFFFFF 100%);
 }
