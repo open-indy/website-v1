@@ -61,3 +61,8 @@ end
 get '/terms' do 
 	erb :terms
 end
+
+get '/maillist' do
+	erb :maillist
+end
+
