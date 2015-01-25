@@ -14,6 +14,10 @@ get "/" do
 	erb :index
 end
 
+get "/2014" do
+	erb :innagural
+end
+
 get "/newchallenge" do
 	erb :newchallenge
 end
