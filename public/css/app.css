@@ -3,6 +3,11 @@ h2,
 	color: #36577A;
 }
 
+h3,
+.h3-custom {
+	color: #36577A;
+}
+
 nav, 
 .navbar-inverse .navbar-collapse {
   background-color: #36577A;
