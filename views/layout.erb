@@ -50,7 +50,12 @@
   <ul class="nav navbar-nav">
     <li><a href="/2014">Check Out Last Year</a></li>
     <li><a href="http://techpoint.org/hack-indiana-series/">Join The Hack Indiana Series</a></li>
-    <li><a href="/">Code Indy Brigade <i>(Coming Soon)</i></a></li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Open Indy Brigade <span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="/codeofconduct">Code of Conduct</a></li>
+      </ul>
+    </li>
     <li><a href="http://hackforchange.org">HackForChange.org</a></li>
     <li><a href="/maillist">Stay Informed - Join Our Mailing List</a></li>
   </ul>
@@ -62,6 +67,7 @@
 <%= yield %>
 
 <!-- Bootstrap jQuery Plugins -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="/bootstrap/js/bootstrap.js"></script>
 <!-- Google Analytics -->
 <script>

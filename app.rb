@@ -22,6 +22,10 @@ get "/newchallenge" do
 	erb :newchallenge
 end
 
+get "/codeofconduct" do 
+	erb :codeofconduct
+end
+
 get "/localchallenge" do
 	@data = Challenge.all
 	erb :localchallenge
