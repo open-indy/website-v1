@@ -22,6 +22,10 @@ get "/newchallenge" do
 	erb :newchallenge
 end
 
+get "/brigade" do 
+	erb :brigade
+end
+
 get "/codeofconduct" do 
 	erb :codeofconduct
 end
