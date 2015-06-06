@@ -39,6 +39,10 @@ get '/terms' do
 	erb :terms
 end
 
+get '/ndoch2015' do
+	erb :ndoch2015
+end
+
 get '/maillist' do
 	erb :maillist
 end
