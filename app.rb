@@ -26,6 +26,10 @@ get "/codeofconduct" do
 	erb :codeofconduct
 end
 
+get "/brigade" do 
+	erb :index
+end
+
 get "/localchallenge" do
 	@data = Challenge.all
 	erb :localchallenge
