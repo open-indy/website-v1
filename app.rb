@@ -22,10 +22,6 @@ get "/newchallenge" do
 	erb :newchallenge
 end
 
-get "/brigade" do 
-	erb :brigade
-end
-
 get "/codeofconduct" do 
 	erb :codeofconduct
 end
@@ -41,6 +37,10 @@ end
 
 get '/ndoch2015' do
 	erb :ndoch2015
+end
+
+get '/tweets' do
+	erb :tweets
 end
 
 get '/maillist' do
